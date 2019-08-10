@@ -1,4 +1,4 @@
-#A85-Allman
+<h1>A85-Allman</h1>
 
 A version of William Colley's A85 8085 assembler, modified to provide
 a reduced version of the instruction set to suit the Cisc-8 processor.
