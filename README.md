@@ -7,7 +7,7 @@ Original available at http://www.retrotechnology.com/restore/a85.html
 with thanks to Herb Johnson
 
 1) used as per the original A85.DOC it operates unchanged
-2) used with the parameter -o it assembles only the Cisc-8 instructions,
+2) used with the parameter -c it assembles only the Cisc-8 instructions,
    other 8085 instructions are opcode errors
    
 Note: I have made significant style changes to the code but not altered
