@@ -1,0 +1,26 @@
+   0020                 LCFIX	EQU	20H	
+   0000   00            	DB	0
+   0001   89            XIF:	DB	LCFIX + 'i' ; comma lables OK?
+                        ;CR after close quote no error
+M  0002   92            XIF	DB	LCFIX + 'r'	; tab error, see if duplicate label?
+   0003   87            XGG:	DB	LCFIX + 'g'   ; spaces no error
+                        
+   0004   06 41         	MVI	B,'A'	; tab error
+   0006   0e 02         	MVI	C,2 
+                        ; space CR no error immediately above
+                        
+   0008   3e 20         	MVI	A,' '   ;trim blanks error
+   000a   3e 20         	MVI	A,' '   
+                        ;no comment line, no error
+                        ;!testing tick operand seperator
+   000c   c5            	PUSH B !
+   000d   d5             PUSH D !
+   000e   e5             PUSH H	; support ! seperator one space
+   000f   c5            	PUSH B!
+O  0010   00 00 00      PUSH D!
+O  0013   00 00 00      PUSH H	; support ! with no spaces
+                        
+3 Error(s)
+   0016                 	END
+0020  LCFIX         0010  PUSH          0003  XGG           0001  XIF       
+
