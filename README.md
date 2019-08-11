@@ -12,3 +12,6 @@ with thanks to Herb Johnson
    
 Note: I have made significant style changes to the code but not altered
 the code itself. I prefer the Allman style...
+
+Note: this version has been tested using 64-bit Linux (Mint) but not on
+any version of windows. It should compile without issue.
